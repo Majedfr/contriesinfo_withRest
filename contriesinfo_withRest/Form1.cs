@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Windows.Forms;
  using System.Net.Http;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace contriesinfo_withRest
 {
@@ -48,7 +49,13 @@ namespace contriesinfo_withRest
         {
             resetbildschirm();
             string land = tb_eingabe.Text;
-            string apiUr = $"https://restcountries.com/v3.1/name/{land}?fullText=true";
+            verbindungzuaPi(land);
+            
+        }
+      
+        private async void verbindungzuaPi(string eingabe)
+        {
+            string apiUr = $"https://restcountries.com/v3.1/name/{eingabe}?fullText=true";
             using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync(apiUr);
@@ -89,6 +96,5 @@ namespace contriesinfo_withRest
                 }
             }
         }
-      
     }
 }
