@@ -105,7 +105,7 @@
             pictureBox_arms.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_arms.TabIndex = 6;
             pictureBox_arms.TabStop = false;
-            pictureBox_arms.Click += pictureBox_arms_Click;
+           
             // 
             // Form1
             // 

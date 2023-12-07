@@ -89,9 +89,6 @@ namespace contriesinfo_withRest
                 }
             }
         }
-        private void pictureBox_arms_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }
