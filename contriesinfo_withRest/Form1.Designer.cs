@@ -41,7 +41,7 @@
             // 
             // pictureBox_flags
             // 
-            pictureBox_flags.Location = new Point(852, 70);
+            pictureBox_flags.Location = new Point(804, 60);
             pictureBox_flags.Margin = new Padding(3, 2, 3, 2);
             pictureBox_flags.Name = "pictureBox_flags";
             pictureBox_flags.Size = new Size(428, 232);
@@ -59,10 +59,10 @@
             // 
             // tb_eingabe
             // 
-            tb_eingabe.Location = new Point(462, 362);
+            tb_eingabe.Location = new Point(460, 363);
             tb_eingabe.Margin = new Padding(3, 2, 3, 2);
             tb_eingabe.Name = "tb_eingabe";
-            tb_eingabe.Size = new Size(210, 23);
+            tb_eingabe.Size = new Size(211, 23);
             tb_eingabe.TabIndex = 2;
             // 
             // label1
@@ -71,9 +71,9 @@
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(80, 358);
             label1.Name = "label1";
-            label1.Size = new Size(295, 25);
+            label1.Size = new Size(295, 50);
             label1.TabIndex = 3;
-            label1.Text = "Bitte geben sie die name des land";
+            label1.Text = "Bitte geben sie die name des land\r\nin Englisch";
             // 
             // button1
             // 
@@ -87,10 +87,10 @@
             // 
             // btn_suche
             // 
-            btn_suche.Location = new Point(481, 431);
+            btn_suche.Location = new Point(354, 491);
             btn_suche.Margin = new Padding(3, 2, 3, 2);
             btn_suche.Name = "btn_suche";
-            btn_suche.Size = new Size(205, 34);
+            btn_suche.Size = new Size(240, 53);
             btn_suche.TabIndex = 5;
             btn_suche.Text = "Suchen";
             btn_suche.UseVisualStyleBackColor = true;
@@ -98,14 +98,13 @@
             // 
             // pictureBox_arms
             // 
-            pictureBox_arms.Location = new Point(833, 339);
+            pictureBox_arms.Location = new Point(804, 322);
             pictureBox_arms.Margin = new Padding(3, 2, 3, 2);
             pictureBox_arms.Name = "pictureBox_arms";
             pictureBox_arms.Size = new Size(428, 246);
             pictureBox_arms.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_arms.TabIndex = 6;
             pictureBox_arms.TabStop = false;
-           
             // 
             // Form1
             // 
@@ -119,6 +118,7 @@
             Controls.Add(tb_eingabe);
             Controls.Add(rtb_ausgabe);
             Controls.Add(pictureBox_flags);
+            ForeColor = Color.Blue;
             Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";

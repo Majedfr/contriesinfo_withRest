@@ -1,6 +1,6 @@
 using System.Text.Json;
 using System.Windows.Forms;
- using System.Net.Http;
+using System.Net.Http;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace contriesinfo_withRest
@@ -50,9 +50,9 @@ namespace contriesinfo_withRest
             resetbildschirm();
             string land = tb_eingabe.Text;
             verbindungzuaPi(land);
-            
+
         }
-      
+
         private async void verbindungzuaPi(string eingabe)
         {
             string apiUr = $"https://restcountries.com/v3.1/name/{eingabe}?fullText=true";
