@@ -94,8 +94,7 @@ namespace contriesinfo_withRest
                     MessageBox.Show(" die angegeben name ist nicht richtig oder gibt es keine Land die so Heiﬂt \n Versuchen sie ernuet");
                     tb_eingabe.Text = "";
                 }
-                //hier ist eine kommentare 
-                // hier ist auch eine kommentare
+                
             }
         }
     }
