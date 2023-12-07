@@ -95,6 +95,7 @@ namespace contriesinfo_withRest
                     tb_eingabe.Text = "";
                 }
                 //hier ist eine kommentare 
+                // hier ist auch eine kommentare
             }
         }
     }
