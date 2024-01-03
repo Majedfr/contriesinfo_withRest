@@ -12,7 +12,7 @@ namespace contriesinfo_withRest
             InitializeComponent();
         }
 
-        private string nachbarstring(List<string> list)
+        private string ZusammenfassenNachbarlander(List<string> list)
         {
             string ausgabe = "";
             foreach (var item in list)
@@ -21,7 +21,7 @@ namespace contriesinfo_withRest
             }
             return ausgabe;
         }
-        private void resetbildschirm()
+        private void zurucksetzenBildschirm()
         {
             rtb_ausgabe.Text = "";
             pictureBox_flags.Image = null;
@@ -47,13 +47,13 @@ namespace contriesinfo_withRest
         }
         private async void btn_suche_Click(object sender, EventArgs e)
         {
-            resetbildschirm();
+            zurucksetzenBildschirm();
             string land = tb_eingabe.Text;
-            verbindungzuaPi(land);
+            AnfragenABI(land);
 
         }
 
-        private async void verbindungzuaPi(string eingabe)
+        private async void AnfragenABI(string eingabe)
         {
             string apiUr = $"https://restcountries.com/v3.1/name/{eingabe}?fullText=true";
             using (HttpClient client = new HttpClient())
@@ -84,7 +84,7 @@ namespace contriesinfo_withRest
                     land1.flags = country.GetProperty("flags").GetProperty("png").GetString();
                     land1.CoatArms = country.GetProperty("coatOfArms").GetProperty("png").GetString();
                     land1.Grose = country.GetProperty("area").GetDouble();
-                    rtb_ausgabe.Text = $" Name :{land1.Oficial_name}\n Hauptstadt : {nachbarstring(land1.Capital)}\n Region :{land1.Region} \n Anzahlderbewohner :{land1.population} \n Gröse des Landes : {land1.Grose} \n Grenze mit : {nachbarstring(land1.Nachbar)} ";
+                    rtb_ausgabe.Text = $" Name :{land1.Oficial_name}\n Hauptstadt : {ZusammenfassenNachbarlander(land1.Capital)}\n Region :{land1.Region} \n Anzahlderbewohner :{land1.population} \n Gröse des Landes : {land1.Grose} \n Grenze mit : {ZusammenfassenNachbarlander(land1.Nachbar)} ";
                     Bildzeigen(land1.flags, land1.CoatArms);
 
 
